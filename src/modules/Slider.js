@@ -76,9 +76,9 @@ class Slider {
             else {
                 this.initSlider();
             }
-        }
 
-        this.resizer();
+            this.resizer();
+        }
     }
 
     /**

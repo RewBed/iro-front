@@ -20,6 +20,8 @@ new Slider("#partners-slider", {center: false});
 // анонсы
 new Slider("#announcements", {center: false}, true, 960);
 
+new Slider("#gallery-slider", {center: false});
+
 // мобильное меню
 $('#toggle-menu-btn').click(() => {
     $('#menu-wrapper').toggleClass('header_menu--opened');

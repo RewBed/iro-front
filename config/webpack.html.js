@@ -20,6 +20,11 @@ module.exports = merge(common, {
             templateParameters: variables.HTML_TEMPLATE.PARAMETERS,
             template: './src/structure.ejs',
             filename: 'structure.html'
+        }),
+        new HtmlWebpackPlugin({
+            templateParameters: variables.HTML_TEMPLATE.PARAMETERS,
+            template: './src/text-page.ejs',
+            filename: 'text-page.html'
         })
     ]
 });
