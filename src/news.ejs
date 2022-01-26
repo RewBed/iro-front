@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>ИРО</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
 <div id="app">
@@ -14,7 +16,7 @@
                     <img src="./images/Logo.png" alt="logo" />
                 </a>
             </div>
-            <div class="header_menu">
+            <div class="header_menu" id="menu-wrapper">
                 <nav>
                     <ul>
                         <li><a href="#">ИНСТИТУТ</a></li>
@@ -39,38 +41,51 @@
                     </a>
                 </div>
             </div>
+            <div class="header_toggle-menu" id="toggle-menu-btn">
+                <img src="./images/toggle-menu.png" alt="toggle-menu" />
+            </div>
         </div>
     </section>
 
     <section class="main-slider">
-        <div class="wrapper main-slider_wrapper">
+
+        <div class="wrapper">
+
+            <!--<div class="circle-bg">
+                <img src="./images/Circle.png" alt="slider-bg" />
+            </div>-->
+
             <div class="main-slider_announcements">
-                <div class="main-slider_announcements_title">
-                    АНОНСЫ
-                </div>
-                <div class="main-slider_announcements_items">
-                    <div class="main-slider_announcements_item">
-                        <div class="main-slider_announcements_item_date">
-                            20.10.2021
-                        </div>
-                        <div class="main-slider_announcements_item_description">
-                            Название анонса лучше в две строки, максимум в три
-                        </div>
-                    </div>
-                    <div class="main-slider_announcements_item">
-                        <div class="main-slider_announcements_item_date">
-                            20.10.2021
-                        </div>
-                        <div class="main-slider_announcements_item_description">
-                            Название анонса лучше в две строки, максимум в три
+                <div class="main-slider_announcements_title">АНОНСЫ</div>
+                <div class="main-slider_announcements_items carousel" id="announcements">
+                    <div class="carousel__slide">
+                        <div class="main-slider_announcements_item">
+                            <div class="main-slider_announcements_item_date">
+                                20.10.2021
+                            </div>
+                            <div class="main-slider_announcements_item_description">
+                                Название анонса лучше в две строки
+                            </div>
                         </div>
                     </div>
-                    <div class="main-slider_announcements_item">
-                        <div class="main-slider_announcements_item_date">
-                            20.10.2021
+                    <div class="carousel__slide">
+                        <div class="main-slider_announcements_item">
+                            <div class="main-slider_announcements_item_date">
+                                20.10.2021
+                            </div>
+                            <div class="main-slider_announcements_item_description">
+                                Название анонса лучше в две строки, максимум в три
+                            </div>
                         </div>
-                        <div class="main-slider_announcements_item_description">
-                            Название анонса лучше в две строки, максимум в три
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="main-slider_announcements_item">
+                            <div class="main-slider_announcements_item_date">
+                                20.10.2021
+                            </div>
+                            <div class="main-slider_announcements_item_description">
+                                Название анонса
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,121 +93,180 @@
         </div>
     </section>
 
-    <section class="news wrapper">
-        <div class="news_header">
-            <div class="news_header_title">
-                <div class="news_header_main">
-                    НОВОСТИ
-                </div>
-                <div class="news_header_filter">
-                    <a href="#" class="news_header_filter_item">
-                        Все новости
-                    </a>
-                    <a href="#" class="news_header_filter_item">
-                        Архив
-                    </a>
-                </div>
-            </div>
-            <div class="news_header_tags">
-                <a href="#" class="news_header_tags_item">#образование</a>
-                <a href="#" class="news_header_tags_item">#конкурсы</a>
-                <a href="#" class="news_header_tags_item">#работа</a>
-                <a href="#" class="news_header_tags_item">#наука</a>
-            </div>
-        </div>
-        <div class="news_media">
-            <div class="news_media_main">
-                <div class="news_media_main_image">
-                    <img src="./images/news-main.png" alt="news_media_main_image" />
-                    <div class="news_media_main_image_tag">#образование</div>
-                    <div class="news_media_main_image_date">19.11.2021</div>
-                </div>
-                <div class="news_media_main_description">
-                    ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи
-                </div>
-            </div>
-            <div class="news_media_about">
-                <div class="news_media_about_header">
-                    <div class="news_media_about_header_title">
-                        СМИ О НАС
+    <section class="wrapper">
+        <div class="news">
+            <div class="news_header">
+                <div class="news_header_title">
+                    <div class="news_header_main">
+                        НОВОСТИ
                     </div>
-                    <div class="news_media_about_header_more">
-                        ВСЕ НОВОСТИ
+                    <div class="news_header_filter">
+                        <a href="#" class="news_header_filter_item">
+                            Все новости
+                        </a>
+                        <a href="#" class="news_header_filter_item">
+                            Архив
+                        </a>
                     </div>
                 </div>
-                <div class="news_media_about_items">
-                    <div class="news_media_about_item">
-                        <div class="news_media_about_item_text news_media_about_item_text--active">
-                            <div class="news_media_about_item_text_border"></div>
-                            ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи.
-                        </div>
-                        <div class="news_media_about_item_link">
-                            Источник: <a href="#">ТАСС</a>
-                        </div>
+                <div class="news_header_tags">
+                    <a href="#" class="news_header_tags_item">#образование</a>
+                    <a href="#" class="news_header_tags_item">#конкурсы</a>
+                    <a href="#" class="news_header_tags_item">#работа</a>
+                    <a href="#" class="news_header_tags_item">#наука</a>
+                </div>
+            </div>
+            <div class="news_media">
+                <div class="news_media_main">
+                    <div class="news_media_main_image">
+                        <img src="./images/news-main.png" alt="news_media_main_image" />
+                        <div class="news_media_main_image_tag">#образование</div>
+                        <div class="news_media_main_image_date">19.11.2021</div>
                     </div>
-                    <div class="news_media_about_item">
-                        <div class="news_media_about_item_text">
-                            <div class="news_media_about_item_text_border"></div>
-                            ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи.
-                        </div>
-                        <div class="news_media_about_item_link">
-                            Источник: <a href="#">ТАСС</a>
-                        </div>
-                    </div>
-                    <div class="news_media_about_item">
-                        <div class="news_media_about_item_text">
-                            <div class="news_media_about_item_text_border"></div>
-                            ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи.
-                        </div>
-                        <div class="news_media_about_item_link">
-                            Источник: <a href="#">ТАСС</a>
-                        </div>
+                    <div class="news_media_main_description">
+                        ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="news_articles carousel" id="articles">
-            <div class="news_article carousel__slide">
-                <div class="news_article_img">
-                    <img src="./images/article.png" alt="news_article_img" />
+                <div class="news_media_about">
+                    <div class="news_media_about_header">
+                        <div class="news_media_about_header_title">
+                            СМИ О НАС
+                        </div>
+                        <a href="#" class="news_media_about_header_more">
+                            ВСЕ НОВОСТИ
+                        </a>
+                    </div>
+                    <div class="news_media_about_items">
+                        <div class="news_media_about_item">
+                            <div class="news_media_about_item_text news_media_about_item_text--active">
+                                <div class="news_media_about_item_text_border"></div>
+                                ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи.
+                            </div>
+                            <div class="news_media_about_item_link">
+                                Источник: <a href="#">ТАСС</a>
+                            </div>
+                        </div>
+                        <div class="news_media_about_item">
+                            <div class="news_media_about_item_text">
+                                <div class="news_media_about_item_text_border"></div>
+                                ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи.
+                            </div>
+                            <div class="news_media_about_item_link">
+                                Источник: <a href="#">ТАСС</a>
+                            </div>
+                        </div>
+                        <div class="news_media_about_item">
+                            <div class="news_media_about_item_text">
+                                <div class="news_media_about_item_text_border"></div>
+                                ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи.
+                            </div>
+                            <div class="news_media_about_item_link">
+                                Источник: <a href="#">ТАСС</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news_article_date">19.11.2021</div>
-                <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
             </div>
-            <div class="news_article carousel__slide">
-                <div class="news_article_img">
-                    <img src="./images/article.png" alt="news_article_img" />
+            <div class="news_articles carousel" id="articles">
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news_article_date">19.11.2021</div>
-                <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
-            </div>
-            <div class="news_article carousel__slide">
-                <div class="news_article_img">
-                    <img src="./images/article.png" alt="news_article_img" />
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news_article_date">19.11.2021</div>
-                <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
-            </div>
-            <div class="news_article carousel__slide">
-                <div class="news_article_img">
-                    <img src="./images/article.png" alt="news_article_img" />
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">миграцией в истории семьи</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news_article_date">19.11.2021</div>
-                <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
-            </div>
-            <div class="news_article carousel__slide">
-                <div class="news_article_img">
-                    <img src="./images/article.png" alt="news_article_img" />
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news_article_date">19.11.2021</div>
-                <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
-            </div>
-            <div class="news_article carousel__slide">
-                <div class="news_article_img">
-                    <img src="./images/article.png" alt="news_article_img" />
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news_article_date">19.11.2021</div>
-                <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel__slide">
+                    <div class="news_article">
+                        <div class="news_article_img">
+                            <img src="./images/article.png" alt="news_article_img" />
+                        </div>
+                        <div>
+                            <div class="news_article_date">19.11.2021</div>
+                            <div class="news_article_text">ИРО исследует, как реализуется комплекс мер, направленных на адаптацию детей с миграцией в истории семьи</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -210,6 +284,39 @@
                     <a href="#" class="media_header_tags_item">#конкурсы</a>
                     <a href="#" class="media_header_tags_item">#работа</a>
                     <a href="#" class="media_header_tags_item">#наука</a>
+                </div>
+            </div>
+            <div class="media_gallery">
+                <div class="media_gallery_slider">
+                    <div class="carousel" id="gallery-slider">
+                        <div class="carousel__slide" data-src="https://fancyapps.com/img/video.mp4" data-fancybox="video-gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02168.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                        <div class="carousel__slide" data-src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" data-fancybox="gallery" data-caption="">
+                            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/eAdh/zdrENMw9y/DSC02158.JPG" alt="slide-image" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

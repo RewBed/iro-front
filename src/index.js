@@ -18,8 +18,9 @@ new Slider("#about-slider", {center: false});
 new Slider("#partners-slider", {center: false});
 
 // анонсы
-new Slider("#announcements", {center: false}, true, 960);
+new Slider("#announcements", {center: false}, true, 760);
 
+// галлерея
 new Slider("#gallery-slider", {center: false});
 
 // мобильное меню

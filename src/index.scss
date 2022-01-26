@@ -269,9 +269,28 @@ body, html {
   }
   &_announcements {
     position: relative;
+    @media screen and (max-width: 960px) {
+      margin-bottom: 30px;
+    }
+    .carousel__button.is-prev, .carousel__button.is-next {
+      color: #ffffff;
+    }
     .carousel__slide {
-      width: 100%;
-      flex: auto;
+      width: 27%;
+      padding: 0;
+      @media screen and (max-width: 1240px) {
+        width: 31%;
+      }
+      @media screen and (max-width: 960px) {
+        padding: 1rem;
+        width: 33%;
+      }
+      @media screen and (max-width: 760px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 550px) {
+        width: 100%;
+      }
     }
     .carousel__dots {
       display: none;
@@ -288,7 +307,7 @@ body, html {
       @media screen and (max-width: 960px) {
         font-size: 24px;
         line-height: 56px;
-        margin-bottom: 33px;
+        margin-bottom: 15px;
       }
     }
     &_items {
@@ -296,9 +315,17 @@ body, html {
       font-style: normal;
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 760px) {
+        padding: 0 40px;
+      }
     }
     &_item {
-      width: 304px;
+      @media screen and (max-width: 960px) {
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 10px;
+        padding: 12px 25px;
+        height: 100%;
+      }
       &_date {
         font-weight: 500;
         font-size: 36px;
@@ -307,8 +334,11 @@ body, html {
         color: #FFFFFF;
         border-bottom: 3px solid #fff;
         margin-bottom: 14px;
-        @media screen and (max-width: 960px) {
+        @media screen and (max-width: 1240px) {
           font-size: 30px;
+        }
+        @media screen and (max-width: 960px) {
+          font-size: 20px;
           line-height: 56px;
         }
       }
@@ -317,9 +347,12 @@ body, html {
         font-size: 24px;
         line-height: 30px;
         color: #FFFFFF;
+        @media screen and (max-width: 1240px) {
+          font-size: 18px;
+        }
         @media screen and (max-width: 960px) {
-          font-size: 20px;
-          line-height: 30px;
+          font-size: 16px;
+          line-height: 21px;
         }
       }
     }
@@ -471,6 +504,9 @@ body, html {
   font-family: Montserrat, serif;
   font-style: normal;
   padding-bottom: 115px;
+  @media screen and (max-width: 960px) {
+    padding-bottom: 50px;
+  }
   &_header {
     display: flex;
     margin-bottom: 42px;
@@ -544,10 +580,13 @@ body, html {
     // gap: 20px;
     grid-template-areas: "A A A";
     .carousel__slide {
-      width: 100%;
-      padding: 1em;
+      width: 90%;
+      padding: 0;
+      margin-bottom: 25px;
+      overflow: hidden;
       @media screen and (max-width: 960px) {
         width: 80%;
+        padding: 1em;
       }
     }
     .carousel__nav {
@@ -558,11 +597,16 @@ body, html {
     }
   }
   &_article {
-    // width: 90%;
     color: $base-black;
-    margin-bottom: 25px;
+    @media screen and (max-width: 960px) {
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+      border-radius: 13px;
+      height: 100%;
+    }
     &_img {
       margin-bottom: 29px;
+      border-radius: 10px;
+      overflow: hidden;
       img {
         width: 100%;
       }
@@ -573,12 +617,21 @@ body, html {
       line-height: 106.5%;
       letter-spacing: 0.1em;
       margin-bottom: 7px;
+      @media screen and (max-width: 960px) {
+        padding: 0 24px;
+        font-size: 9px;
+      }
     }
     &_text {
       font-weight: 500;
       font-size: 24px;
       line-height: 106.5%;
       letter-spacing: -0.03em;
+      @media screen and (max-width: 960px) {
+        padding: 0 24px;
+        padding-bottom: 19px;
+        font-size: 14px;
+      }
     }
   }
   &_media {
@@ -587,8 +640,18 @@ body, html {
     display: flex;
     margin-bottom: 103px;
     justify-content: space-between;
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
     &_main {
       width: 45%;
+      @media screen and (max-width: 1274px) {
+        width: 49%;
+      }
+      @media screen and (max-width: 960px) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
       &_image {
         position: relative;
         img {
@@ -628,16 +691,28 @@ body, html {
         letter-spacing: -0.03em;
         color: #4B4B4B;
         margin-top: 34px;
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+        }
       }
     }
     &_about {
       width: 38%;
       border-left: 5px solid $base-color;
       padding-left: 24px;
+      @media screen and (max-width: 1274px) {
+        width: 49%;
+      }
+      @media screen and (max-width: 960px) {
+        width: 100%;
+      }
       &_header {
         display: flex;
         justify-content: space-between;
         margin-bottom: 26px;
+        @media screen and (max-width: 480px) {
+          flex-direction: column;
+        }
         &_title {
           font-weight: 600;
           font-size: 36px;
@@ -646,6 +721,9 @@ body, html {
           align-items: center;
           letter-spacing: 0.1em;
           color: $base-color;
+          @media screen and (max-width: 1024px) {
+            font-size: 24px;
+          }
         }
         &_more {
           color: $base-color;
@@ -655,6 +733,11 @@ body, html {
           text-align: center;
           letter-spacing: 2px;
           text-transform: uppercase;
+          padding-top: 9px;
+          text-decoration: none;
+          @media screen and (max-width: 480px) {
+            text-align: left;
+          }
         }
       }
       &_items {
@@ -671,6 +754,10 @@ body, html {
           color: #4B4B4B;
           margin-bottom: 20px;
           position: relative;
+          @media screen and (max-width: 1024px) {
+            font-size: 16px;
+            margin-bottom: 7px;
+          }
           &--active {
             .news_media_about_item_text_border {
               display: block;
@@ -749,11 +836,24 @@ body, html {
 
   &_slider {
     margin-top: 109px;
-
+    .carousel__nav {
+      @media screen and (max-width: 1440px) {
+        display: none;
+      }
+    }
+    .carousel__button.is-prev, .carousel__button.is-next {
+      color: #ffffff;
+    }
     .carousel__slide {
       width: 30%;
       margin: 0 18px;
       padding: 45px 32px;
+      @media screen and (max-width: 960px) {
+        width: 46%;
+      }
+      @media screen and (max-width: 648px) {
+        width: 100%;
+      }
     }
     .carousel__button.is-next {
       right: -80px;
@@ -784,6 +884,7 @@ body, html {
         letter-spacing: -0.03em;
         color: #8B8B8B;
         margin-bottom: 15px;
+        text-transform: uppercase;
       }
       &_text {
         font-weight: 500;
@@ -974,15 +1075,29 @@ body, html {
   }
   &_slider {
     .carousel__slide {
-      width: 184px;
-      height: 184px;
-      margin-right: 137px;
+      width: 33%;
+      height: 183px;
       @media screen and (max-width: 960px) {
-        margin-right: 122px;
+
       }
     }
+    .carousel__nav {
+      display: none
+    }
     &_slide {
-      background: red;
+      // : red;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
     }
   }
 }
@@ -1106,9 +1221,16 @@ body, html {
   background-color: #8D8D8D;
   padding-top: 109px;
   padding-bottom: 143px;
+  @media screen and (max-width: 960px) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
   &_header {
     display: flex;
     margin-bottom: 42px;
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
     &_title {
 
     }
@@ -1138,10 +1260,21 @@ body, html {
       display: flex;
       margin-left: 194px;
       margin-top: 24px;
+      font-size: 14px;
+      flex-wrap: wrap;
+      @media screen and (max-width: 1024px) {
+        margin-left: 60px;
+      }
+      @media screen and (max-width: 960px) {
+        margin-left: 0px;
+      }
       &_item {
         padding: 0 28px;
         color: #fff;
         text-decoration: none;
+        @media screen and (max-width: 960px) {
+          padding: 0 14px 0 0;
+        }
       }
     }
   }
@@ -1153,10 +1286,16 @@ body, html {
         overflow: hidden;
         margin-right: 2%;
         padding: 0;
+        @media screen and (max-width: 960px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 760px) {
+          width: 100%;
+        }
         img {
           height: 100%;
           width: 100%;
-          object-fit: contain;
+          object-fit: cover;
         }
       }
     }
@@ -1166,6 +1305,10 @@ body, html {
 .text-page {
   padding-bottom: 100px;
   padding-top: 100px;
+  @media screen and (max-width: 960px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .spoiler {
@@ -1202,6 +1345,45 @@ body, html {
       width: 100%;
       border: none;
       height: 700px;
+    }
+  }
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 40px;
+  background: $base-color;
+  display: block;
+  li {
+    display: inline-block;
+    a {
+      position: relative;
+      font-size: 19px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      padding-right: 20px;
+      margin-right: 10px;
+      text-decoration: none;
+      @media screen and (max-width: 760px) {
+        font-size: 14px;
+      }
+      &:after {
+        content: "";
+        width: 9px;
+        height: 8px;
+        border-top:2px solid #555;
+        border-right:2px solid #555;
+        position:absolute;
+        top: 6px;
+        right: 0;
+        transform:rotate(45deg);
+        display: block;
+      }
+    }
+    &:last-of-type a {
+      color: $base-black;
+      font-weight: bold;
+      &:after { display: none; }
     }
   }
 }
