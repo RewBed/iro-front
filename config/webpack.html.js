@@ -30,6 +30,11 @@ module.exports = merge(common, {
             templateParameters: variables.HTML_TEMPLATE.PARAMETERS,
             template: './src/docs.ejs',
             filename: 'docs.html'
+        }),
+        new HtmlWebpackPlugin({
+            templateParameters: variables.HTML_TEMPLATE.PARAMETERS,
+            template: './src/default-ui.ejs',
+            filename: 'default-ui.html'
         })
     ]
 });
