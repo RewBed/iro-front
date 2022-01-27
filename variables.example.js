@@ -22,7 +22,7 @@ module.exports.variables = {
     /**
      * Имя CSS файла
      */
-    BUNDLE_CSS_FILE_NAME: '../../local/templates/irro-default/index.bundle.css',
+    BUNDLE_CSS_FILE_NAME: 'index.bundle.css',
 
     /**
      * Прокси для ajax

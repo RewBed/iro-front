@@ -628,6 +628,8 @@ body, html {
       overflow: hidden;
       img {
         width: 100%;
+        height: 233px;
+        object-fit: cover;
       }
     }
     &_date {
@@ -664,6 +666,7 @@ body, html {
     }
     &_main {
       width: 45%;
+      text-decoration: none;
       @media screen and (max-width: 1274px) {
         width: 49%;
       }

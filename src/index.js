@@ -1,7 +1,8 @@
 import './index.scss';
 import "@fancyapps/ui/dist/fancybox.css";
+// import $ from "jquery";
 
-import $ from "jquery";
+/*import bvi from 'bvi';*/
 
 import Slider from "./modules/Slider";
 import DefaultUI from "./modules/DefaultUI";
@@ -33,3 +34,5 @@ DefaultUI.mobileMenu();
 /*$('#toggle-menu-btn').click(() => {
     $('#menu-wrapper').toggleClass('header_menu--opened');
 });*/
+
+/*new isvek.Bvi();*/
